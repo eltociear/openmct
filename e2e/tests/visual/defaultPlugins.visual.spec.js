@@ -66,9 +66,9 @@ test.describe('Visual - Default', () => {
         await percySnapshot(page, `About (theme: '${theme}')`);
     });
 
-    test('Visual - Default Condition Set', async ({ page, theme }) => {
+    test.fixme('Visual - Default Condition Set', async ({ page, theme }) => {
 
-        await createDomainObjectWithDefaults(page, 'Condition Set');
+        await createDomainObjectWithDefaults(page, { type: 'Condition Set' });
 
         // Take a snapshot of the newly created Condition Set object
         await percySnapshot(page, `Default Condition Set (theme: '${theme}')`);
@@ -76,7 +76,7 @@ test.describe('Visual - Default', () => {
 
     test('Visual - Default Condition Widget', async ({ page, theme }) => {
 
-        await createDomainObjectWithDefaults(page, 'Condition Widget');
+        await createDomainObjectWithDefaults(page, { type: 'Condition Widget' });
 
         // Take a snapshot of the newly created Condition Widget object
         await percySnapshot(page, `Default Condition Widget (theme: '${theme}')`);
@@ -98,8 +98,8 @@ test.describe('Visual - Default', () => {
         await percySnapshot(page, `removed amplitude property value (theme: '${theme}')`);
     });
 
-    test('Visual - Save Successful Banner', async ({ page, theme }) => {
-        await createDomainObjectWithDefaults(page, 'Timer');
+    test.fixme('Visual - Save Successful Banner', async ({ page, theme }) => {
+        await createDomainObjectWithDefaults(page, { type: 'Timer' });
 
         await page.locator('.c-message-banner__message').hover({ trial: true });
         await percySnapshot(page, `Banner message shown (theme: '${theme}')`);
@@ -120,8 +120,8 @@ test.describe('Visual - Default', () => {
 
     });
 
-    test('Visual - Default Gauge is correct', async ({ page, theme }) => {
-        await createDomainObjectWithDefaults(page, 'Gauge');
+    test.fixme('Visual - Default Gauge is correct', async ({ page, theme }) => {
+        await createDomainObjectWithDefaults(page, { type: 'Gauge' });
 
         // Take a snapshot of the newly created Gauge object
         await percySnapshot(page, `Default Gauge (theme: '${theme}')`);
